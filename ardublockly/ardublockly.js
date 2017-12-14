@@ -12,8 +12,9 @@ var Ardublockly = Ardublockly || {};
 /** Initialize function for Ardublockly, to be called on page load. */
 Ardublockly.init = function() {
   // Lang init must run first for the rest of the page to pick the right msgs
+  Ardublockly.changeToolbox();
   Ardublockly.initLanguage();
-
+  Ardublockly.initDifficulty();
   // Inject Blockly into content_blocks and fetch additional blocks
   Ardublockly.injectBlockly(document.getElementById('content_blocks'),
                             Ardublockly.TOOLBOX_XML, '../blockly/');
