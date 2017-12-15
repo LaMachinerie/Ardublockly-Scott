@@ -78,9 +78,9 @@
       </a>
       <!-- Horizontal Navbar links only shown on large resolutions -->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#" id="button_load"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li>
-        <li><a href="#" id="button_save"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
-        <li><a href="#" id="button_delete"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
+        <li><a href="#" id="button_load"><span class="translatable_open">Ouvrir</span><i class="mdi-file-file-upload left"></i></a></li>
+        <li><a href="#" id="button_save"><span class="translatable_save">Sauvegarder</span><i class="mdi-file-file-download left"></i></a></li>
+        <li><a href="#" id="button_delete"><span class="translatable_deleteAll">Tout Supprimer</span><i class="mdi-action-delete left"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -90,17 +90,17 @@
     <li class="logo"><img src="img/sidenav_header.png" alt="Ardublockly block image"></li>
     <li class="no-padding">
       <ul>
-        <li id="menu_load"><a href="#"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li>
-        <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
-        <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
-        <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
+        <li id="menu_load"><a href="#"><span class="translatable_open">Ouvrir</span><i class="mdi-file-file-upload left"></i></a></li>
+        <li id="menu_save"><a href="#"><span class="translatable_save">Sauvegarder</span><i class="mdi-file-file-download left"></i></a></li>
+        <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Tout supprimer</span><i class="mdi-action-delete left"></i></a></li>
+        <li id="menu_settings"><a href="#"><span class="translatable_settings">Paramètre</span><i class="mdi-action-settings left"></i></a></li>
         <li id="menu_bug"><a href="https://github.com/LaMachinerie/SCOTT/wiki" target="_blank"><span class="translatable_documentation">Documentation</span><i class="mdi-action-help left"></i></a></li>
-        <li id="menu_bug"><a href="http://github.com/LaMachinerie/SCOTT/issues" target="_blank"><span class="translatable_reportBug">Report Bug</span><i class="mdi-action-bug-report left"></i></a></li>
+        <li id="menu_bug"><a href="http://github.com/LaMachinerie/SCOTT/issues" target="_blank"><span class="translatable_reportBug">Signaler un Bug</span><i class="mdi-action-bug-report left"></i></a></li>
       </ul>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <div class="collapsible-header"><span class="translatable_examples">Examples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
+          <div class="collapsible-header"><span class="translatable_examples">Exemples</span><i class="mdi-navigation-arrow-drop-down"></i></div>
           <div class="collapsible-body">
             <ul>
 			  <li id="menu_example_4"><a href="#!">Scott Suiveur</a></li>
@@ -178,7 +178,7 @@
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
-              <span class="translatable_arduinoSourceCode">Arduino Source Code</span>
+              <span class="translatable_arduinoSourceCode">Code Source Arduino</span>
             </div>
             <div class="collapsible-body">
               <pre id="content_arduino" class="content content_height_transition content_arduino_large"></pre>
@@ -187,7 +187,7 @@
           <li>
             <div class="collapsible-header" id="xml_collapsible_header">
               <span class="collapsible_logo">&#60; &#62;</span>
-              <span class="translatable_blocksXml">Blocks XML</span>
+              <span class="translatable_blocksXml">Blocs XML</span>
             </div>
             <div class="collapsible-body" style="position:relative" id="xml_collapsible_body">
               <a class="btn-floating btn-large waves-effect waves-light arduino_teal z-depth-1-half" id="button_load_xml"><i class="mdi-action-extension"></i></a>
@@ -205,7 +205,7 @@
       <li>
         <div id="ide_output_collapsible_header" class="collapsible-header ide_output_header_normal">
           <i class="mdi-action-swap-vert Medium" style="font-size: 2.2rem;"></i>
-          <span class="translatable_arduinoOpMainTitle">Arduino IDE output</span>
+          <span class="translatable_arduinoOpMainTitle">Console Arduino IDE</span>
         </div>
         <div class="collapsible-body">
           <div id="content_ide_output" class="content"></div>
@@ -218,44 +218,44 @@
   <!-- Settings: Displayed as a Materialize Modal -->
   <div id="settings_dialog" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <h4><span class="translatable_settings">Settings</span></h4>
+      <h4><span class="translatable_settings">Paramètres</span></h4>
 	  <div class="modal_section">
-        <label><span class="translatable_difficulty">Difficulty</span>:</label>
+        <label><span class="translatable_difficulty">Difficulté</span>:</label>
         <select name="settings_difficulty" id="difficulty"></select>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_compilerLocation">Compiler Location</span>:</label>
+        <label><span class="translatable_compilerLocation">Chemin d'accés au compilateur</span>:</label>
         <input type="text" id="settings_compiler_location" readonly>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_sketchFolder">Sketch Folder</span>:</label>
+        <label><span class="translatable_sketchFolder">Dossier des Sktechs</span>:</label>
         <input type="text" id="settings_sketch_location" readonly>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_arduinoBoard">Arduino Board</span>:</label>
+        <label><span class="translatable_arduinoBoard">Cartes Arduino</span>:</label>
         <select name="settings_board" id="board">
-          <option value="uno" class="translatable_arduinoBoardDefault">Arduino Board unknown</option>
+          <option value="uno" class="translatable_arduinoBoardDefault">Carte inconnu</option>
         </select>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_comPort">COM Port<span>:</label>
+        <label><span class="translatable_comPort">Ports série C(OM)<span>:</label>
         <select name="settings_serial" id="serial_port">
-          <option value="COMX" class="translatable_comPortDefault">COM Port unknown</option>
+          <option value="COMX" class="translatable_comPortDefault">Port série inconnu</option>
         </select>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_defaultIdeButton">Default IDE button</span>:</label>
+        <label><span class="translatable_defaultIdeButton">Bouton IDE par défaut</span>:</label>
         <select name="settings_ide" id="ide_settings">
-          <option value="verify" class="translatable_defaultIdeButtonDefault">IDE options unknown</option>
+          <option value="verify" class="translatable_defaultIdeButtonDefault">Options IDE inconnu</option>
         </select>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_language">Language</span>:</label>
+        <label><span class="translatable_language">Langage</span>:</label>
         <select name="settings_language" id="language"></select>
       </div>
     </div>
     <div class="modal-footer">
-      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Return</span></a>
+      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Valider</span></a>
     </div>
   </div>
 
@@ -263,12 +263,12 @@
   <div id="blocks_menu" class="modal modal-fixed-footer">
     <div class="modal-content">
       <div>
-        <h4><span class="translatable_addBlocksTitle">Additional Blocks</span></h4>
+        <h4><span class="translatable_addBlocksTitle">Blocs supplémentaires</span></h4>
       </div>
       <div id="blocks_menu_body"></div>
     </div>
     <div class="modal-footer">
-      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Return</span></a>
+      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Valider</span></a>
     </div>
   </div>
 
@@ -300,13 +300,13 @@
   <div id="not_running_dialog" class="modal">
     <div class="modal-content">
       <div>
-        <h4 id="gen_alert_title"><span class="translatable_noServerTitle">Ardublockly app not running</span></h4>
+        <h4 id="gen_alert_title"><span class="translatable_noServerTitle">Serveur Ardublockly innaccesible</span></h4>
       </div>
       <div class="translatable_noServerBody">
-        <p>For all the Ardublockly features to be enabled, the Ardublockly desktop application must be running locally on your computer.</p>
-        <p>If you are using an online version you will not be able to configure the settings nor load the blocks code into an Arduino.</p>
-        <p>Installation instruction can be found in the <a href="https://github.com/carlosperate/ardublockly">Ardublockly repository</a>.</p>
-        <p>If you have Ardublockly already installed, make sure the application is running correctly.</p>
+        <p>Pour que toutes les fonctionnalités d'Ardublockly soit disponible, le serveur Ardublockly doit être lancé sur votre ordinateur.</p>
+        <p>Si vous utilisez une version distante d'Ardublockly vous ne pourrez ni configurer les paramètres ni charger les blocs dans une Arduino.</p>
+        <p>Les information d'installationpeuvent être trouver sur le <a href="https://github.com/carlosperate/ardublockly"> github Ardublockly</a>.</p>
+        <p>Si Ardublockly est déjà installé, verifiez que l'application est bien lancée</p>
       </div>
     </div>
     <div class="modal-footer">
