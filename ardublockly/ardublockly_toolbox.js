@@ -176,80 +176,34 @@ Ardublockly.changeToolbox = function(){
 		'    <block type="infinite_loop"></block>' +
 		'  </category>' +
 		'  <sep></sep>' +
-		// '  <category id="catAudio" name="Audio">' +
-		// '    <block type="io_tone">' +
-		// '      <field name="TONEPIN">0</field>' +
-		// '      <value name="FREQUENCY">' +
-		// '        <shadow type="math_number">' +
-		// '          <field name="NUM">220</field>' +
-		// '        </shadow>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="io_notone"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catComms" name="Comms">' +
-		// '    <block type="serial_setup"></block>' +
-		// '    <block type="serial_print"></block>' +
-		// '    <block type="text_prompt_ext">' +
-		// '      <value name="TEXT">' +
-		// '        <block type="text"></block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="spi_setup"></block>' +
-		// '    <block type="spi_transfer"></block>' +
-		// '    <block type="spi_transfer_return"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catMotors" name="Servo">' +
-		// '    <block type="servo_write">' +
-		// '      <value name="SERVO_ANGLE">' +
-		// '        <block type="math_number">' +
-		// '          <field name="NUM">90</field>' +
-		// '        </block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="servo_read"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		//'  <category id="catScott" name="Scott v2">' +
+		'  <category id="catScott" name="Scott">' +
 		//'    <block type="scott_forward"></block>' +
 		//'    <block type="scott_backward"></block>' +
-		//'    <block type="scott_right"></block>' +
-		//'    <block type="scott_left"></block>' +
-		//'    <block type="scott_stop"></block>' +
-		//'    <block type="scott_setspeed"></block>' +
-		//'    <block type="scott_sharp"></block>' +
-		//'    <block type="scott_version"></block>' +
-		//'  </category>' +
-		'  <category id="catScotty" name="Scott">' +
-		//'    <block type="scotty_forward"></block>' +
-		//'    <block type="scotty_backward"></block>' +
-		'    <block type="scotty_deplacement">' +
+		'    <block type="scott_deplacement">' +
 		'		<value name="distance">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">10</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scotty_rotation">' +
+		'    <block type="scott_rotation">' +
 		'		<value name="angle">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">90</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		//'    <block type="scotty_right"></block>' +
-		//'    <block type="scotty_left"></block>' +
-		'    <block type="scotty_stop"></block>' +
-		'    <block type="scotty_turn_go"></block>' +
-		'    <block type="scotty_crayon"></block>' +
-		//'    <block type="scotty_polygone"></block>' +
-		//'    <block type="scotty_cercle"></block>' +
-		//'    <block type="scotty_ligne"></block>' +
-		//'    <block type="scotty_contact"></block>' +
-		//'    <block type="scotty_lever_crayon"></block>' +
-		//'    <block type="scotty_descendre_crayon"></block>' +
+		//'    <block type="scott_right"></block>' +
+		//'    <block type="scott_left"></block>' +
+		'    <block type="scott_stop"></block>' +
+		'    <block type="scott_turn_go"></block>' +
+		'    <block type="scott_crayon"></block>' +
+		//'    <block type="scott_polygone"></block>' +
+		//'    <block type="scott_cercle"></block>' +
+		//'    <block type="scott_ligne"></block>' +
+		//'    <block type="scott_contact"></block>' +
+		//'    <block type="scott_lever_crayon"></block>' +
+		//'    <block type="scott_descendre_crayon"></block>' +
 		'  </category>' +
 		'</xml>';
 	}
@@ -417,85 +371,39 @@ Ardublockly.changeToolbox = function(){
 		'    <block type="infinite_loop"></block>' +
 		'  </category>' +
 		'  <sep></sep>' +
-		// '  <category id="catAudio" name="Audio">' +
-		// '    <block type="io_tone">' +
-		// '      <field name="TONEPIN">0</field>' +
-		// '      <value name="FREQUENCY">' +
-		// '        <shadow type="math_number">' +
-		// '          <field name="NUM">220</field>' +
-		// '        </shadow>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="io_notone"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catComms" name="Comms">' +
-		// '    <block type="serial_setup"></block>' +
-		// '    <block type="serial_print"></block>' +
-		// '    <block type="text_prompt_ext">' +
-		// '      <value name="TEXT">' +
-		// '        <block type="text"></block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="spi_setup"></block>' +
-		// '    <block type="spi_transfer"></block>' +
-		// '    <block type="spi_transfer_return"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catMotors" name="Servo">' +
-		// '    <block type="servo_write">' +
-		// '      <value name="SERVO_ANGLE">' +
-		// '        <block type="math_number">' +
-		// '          <field name="NUM">90</field>' +
-		// '        </block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="servo_read"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		//'  <category id="catScott" name="Scott v2">' +
+		'  <category id="catScott" name="Scott">' +
 		//'    <block type="scott_forward"></block>' +
 		//'    <block type="scott_backward"></block>' +
-		//'    <block type="scott_right"></block>' +
-		//'    <block type="scott_left"></block>' +
-		//'    <block type="scott_stop"></block>' +
-		//'    <block type="scott_setspeed"></block>' +
-		//'    <block type="scott_sharp"></block>' +
-		//'    <block type="scott_version"></block>' +
-		//'  </category>' +
-		'  <category id="catScotty" name="Scott">' +
-		//'    <block type="scotty_forward"></block>' +
-		//'    <block type="scotty_backward"></block>' +
-		'    <block type="scotty_deplacement">' +
+		'    <block type="scott_deplacement">' +
 		'		<value name="distance">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">10</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scotty_rotation">' +
+		'    <block type="scott_rotation">' +
 		'		<value name="angle">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">90</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		//'    <block type="scotty_right"></block>' +
-		//'    <block type="scotty_left"></block>' +
-		'    <block type="scotty_stop"></block>' +
-		'    <block type="scotty_turn_go"></block>' +
-		'    <block type="scotty_crayon"></block>' +
-		'    <block type="scotty_polygone"></block>' +
-		'    <block type="scotty_cercle"></block>' +
-		'    <block type="scotty_ligne"></block>' +
-		'    <block type="scotty_contact"></block>' +
-		//'    <block type="scotty_lever_crayon"></block>' +
-		//'    <block type="scotty_descendre_crayon"></block>' +
+		//'    <block type="scott_right"></block>' +
+		//'    <block type="scott_left"></block>' +
+		'    <block type="scott_stop"></block>' +
+		'    <block type="scott_turn_go"></block>' +
+		'    <block type="scott_crayon"></block>' +
+		//'    <block type="scott_polygone"></block>' +
+		//'    <block type="scott_cercle"></block>' +
+		//'    <block type="scott_ligne"></block>' +
+		//'    <block type="scott_contact"></block>' +
+		//'    <block type="scott_lever_crayon"></block>' +
+		//'    <block type="scott_descendre_crayon"></block>' +
 		'  </category>' +
 		'</xml>';
 	}
 	if(Ardublockly.DIFFICULTY == 3){
-	Ardublockly.TOOLBOX_XML =
+		Ardublockly.TOOLBOX_XML =
 		'<xml>' +
 		'  <sep></sep>' +
 		'  <category id="catLogic" name="Logic">' +
@@ -658,80 +566,34 @@ Ardublockly.changeToolbox = function(){
 		'    <block type="infinite_loop"></block>' +
 		'  </category>' +
 		'  <sep></sep>' +
-		// '  <category id="catAudio" name="Audio">' +
-		// '    <block type="io_tone">' +
-		// '      <field name="TONEPIN">0</field>' +
-		// '      <value name="FREQUENCY">' +
-		// '        <shadow type="math_number">' +
-		// '          <field name="NUM">220</field>' +
-		// '        </shadow>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="io_notone"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catComms" name="Comms">' +
-		// '    <block type="serial_setup"></block>' +
-		// '    <block type="serial_print"></block>' +
-		// '    <block type="text_prompt_ext">' +
-		// '      <value name="TEXT">' +
-		// '        <block type="text"></block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="spi_setup"></block>' +
-		// '    <block type="spi_transfer"></block>' +
-		// '    <block type="spi_transfer_return"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catMotors" name="Servo">' +
-		// '    <block type="servo_write">' +
-		// '      <value name="SERVO_ANGLE">' +
-		// '        <block type="math_number">' +
-		// '          <field name="NUM">90</field>' +
-		// '        </block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="servo_read"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		//'  <category id="catScott" name="Scott v2">' +
+		'  <category id="catScott" name="Scott">' +
 		//'    <block type="scott_forward"></block>' +
 		//'    <block type="scott_backward"></block>' +
-		//'    <block type="scott_right"></block>' +
-		//'    <block type="scott_left"></block>' +
-		//'    <block type="scott_stop"></block>' +
-		//'    <block type="scott_setspeed"></block>' +
-		//'    <block type="scott_sharp"></block>' +
-		//'    <block type="scott_version"></block>' +
-		//'  </category>' +
-		'  <category id="catScotty" name="Scott">' +
-		//'    <block type="scotty_forward"></block>' +
-		//'    <block type="scotty_backward"></block>' +
-		'    <block type="scotty_deplacement">' +
+		'    <block type="scott_deplacement">' +
 		'		<value name="distance">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">10</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scotty_rotation">' +
+		'    <block type="scott_rotation">' +
 		'		<value name="angle">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">90</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		//'    <block type="scotty_right"></block>' +
-		//'    <block type="scotty_left"></block>' +
-		'    <block type="scotty_stop"></block>' +
-		'    <block type="scotty_turn_go"></block>' +
-		'    <block type="scotty_crayon"></block>' +
-		'    <block type="scotty_polygone"></block>' +
-		'    <block type="scotty_cercle"></block>' +
-		'    <block type="scotty_ligne"></block>' +
-		'    <block type="scotty_contact"></block>' +
-		//'    <block type="scotty_lever_crayon"></block>' +
-		//'    <block type="scotty_descendre_crayon"></block>' +
+		//'    <block type="scott_right"></block>' +
+		//'    <block type="scott_left"></block>' +
+		'    <block type="scott_stop"></block>' +
+		'    <block type="scott_turn_go"></block>' +
+		'    <block type="scott_crayon"></block>' +
+		//'    <block type="scott_polygone"></block>' +
+		//'    <block type="scott_cercle"></block>' +
+		//'    <block type="scott_ligne"></block>' +
+		//'    <block type="scott_contact"></block>' +
+		//'    <block type="scott_lever_crayon"></block>' +
+		//'    <block type="scott_descendre_crayon"></block>' +
 		'  </category>' +
 		'</xml>';
 	}
@@ -899,80 +761,34 @@ Ardublockly.changeToolbox = function(){
 		'    <block type="infinite_loop"></block>' +
 		'  </category>' +
 		'  <sep></sep>' +
-		// '  <category id="catAudio" name="Audio">' +
-		// '    <block type="io_tone">' +
-		// '      <field name="TONEPIN">0</field>' +
-		// '      <value name="FREQUENCY">' +
-		// '        <shadow type="math_number">' +
-		// '          <field name="NUM">220</field>' +
-		// '        </shadow>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="io_notone"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catComms" name="Comms">' +
-		// '    <block type="serial_setup"></block>' +
-		// '    <block type="serial_print"></block>' +
-		// '    <block type="text_prompt_ext">' +
-		// '      <value name="TEXT">' +
-		// '        <block type="text"></block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="spi_setup"></block>' +
-		// '    <block type="spi_transfer"></block>' +
-		// '    <block type="spi_transfer_return"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		// '  <category id="catMotors" name="Servo">' +
-		// '    <block type="servo_write">' +
-		// '      <value name="SERVO_ANGLE">' +
-		// '        <block type="math_number">' +
-		// '          <field name="NUM">90</field>' +
-		// '        </block>' +
-		// '      </value>' +
-		// '    </block>' +
-		// '    <block type="servo_read"></block>' +
-		// '  </category>' +
-		// '  <sep></sep>' +
-		//'  <category id="catScott" name="Scott v2">' +
-		//'    <block type="scott_forward"></block>' +
-		//'    <block type="scott_backward"></block>' +
-		//'    <block type="scott_right"></block>' +
-		//'    <block type="scott_left"></block>' +
-		//'    <block type="scott_stop"></block>' +
-		//'    <block type="scott_setspeed"></block>' +
-		//'    <block type="scott_sharp"></block>' +
-		//'    <block type="scott_version"></block>' +
-		//'  </category>' +
-		'  <category id="catScotty" name="Scott">' +
-		//'    <block type="scotty_forward"></block>' +
-		//'    <block type="scotty_backward"></block>' +
-		'    <block type="scotty_deplacement">' +
+		'  <category id="catScott" name="Scott">' +
+		'    <block type="scott_forward"></block>' +
+		'    <block type="scott_backward"></block>' +
+		'    <block type="scott_deplacement">' +
 		'		<value name="distance">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">10</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scotty_rotation">' +
+		'    <block type="scott_rotation">' +
 		'		<value name="angle">' +
 		'       	<block type="math_number">' +
 		'          		<field name="NUM">90</field>' +
 		'        	</block>' +
 		'		</value>' +
 		'    </block>' +
-		//'    <block type="scotty_right"></block>' +
-		//'    <block type="scotty_left"></block>' +
-		'    <block type="scotty_stop"></block>' +
-		'    <block type="scotty_turn_go"></block>' +
-		'    <block type="scotty_crayon"></block>' +
-		'    <block type="scotty_polygone"></block>' +
-		'    <block type="scotty_cercle"></block>' +
-		'    <block type="scotty_ligne"></block>' +
-		'    <block type="scotty_contact"></block>' +
-		//'    <block type="scotty_lever_crayon"></block>' +
-		//'    <block type="scotty_descendre_crayon"></block>' +
+		'    <block type="scott_right"></block>' +
+		'    <block type="scott_left"></block>' +
+		'    <block type="scott_stop"></block>' +
+		'    <block type="scott_turn_go"></block>' +
+		'    <block type="scott_crayon"></block>' +
+		'    <block type="scott_polygone"></block>' +
+		'    <block type="scott_cercle"></block>' +
+		'    <block type="scott_ligne"></block>' +
+		'    <block type="scott_contact"></block>' +
+		'    <block type="scott_lever_crayon"></block>' +
+		'    <block type="scott_descendre_crayon"></block>' +
 		'  </category>' +
 		'</xml>';
 	}
