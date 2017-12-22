@@ -15,10 +15,13 @@ Ardublockly.init = function() {
   Ardublockly.changeToolbox();
   Ardublockly.initLanguage();
   Ardublockly.initDifficulty();
+Ardublockly.initOutputLanguage();
+  Turtle.init();
+  
   // Inject Blockly into content_blocks and fetch additional blocks
   Ardublockly.injectBlockly(document.getElementById('content_blocks'),
                             Ardublockly.TOOLBOX_XML, '../blockly/');
-  Ardublockly.importExtraBlocks();
+  //Ardublockly.importExtraBlocks();
 
   Ardublockly.designJsInit();
   Ardublockly.initialiseIdeButtons();
@@ -88,7 +91,7 @@ Ardublockly.bindActionFunctions = function() {
   Ardublockly.bindClick_('button_ide_left', function() {
     Ardublockly.ideButtonLeftAction();
   });
-  Ardublockly.bindClick_('button_load_xml', Ardublockly.XmlTextareaToBlocks);
+  //Ardublockly.bindClick_('button_load_xml', Ardublockly.XmlTextareaToBlocks);
   Ardublockly.bindClick_('button_toggle_toolbox', Ardublockly.toogleToolbox);
 
   // Settings modal input field listeners
@@ -514,7 +517,7 @@ Ardublockly.XmlTextareaToBlocks = function() {
  * @type {!String}
  * @private
  */
-Ardublockly.PREV_ARDUINO_CODE_ = 'void setup() {\n\n}\n\n\nvoid loop() {\n\n}';
+Ardublockly.PREV_OUTPUT_CODE_ = 'void setup() {\n\n}\n\n\nvoid loop() {\n\n}';
 
 /**
  * Populate the Arduino Code and Blocks XML panels with content generated from
@@ -525,9 +528,19 @@ Ardublockly.renderContent = function() {
   if (Ardublockly.blocklyIsDragging()) return;
 
   // Render Arduino Code with latest change highlight and syntax highlighting
-  var arduinoCode = Ardublockly.generateArduino();
-  if (arduinoCode !== Ardublockly.PREV_ARDUINO_CODE_) {
-    var diff = JsDiff.diffWords(Ardublockly.PREV_ARDUINO_CODE_, arduinoCode);
+
+  var outputCode = "";
+  if(Ardublockly.OUTPUT_LANGUAGE == 1){
+	outputCode = Ardublockly.generateArduino();
+  }else if(Ardublockly.OUTPUT_LANGUAGE == 2){
+	outputCode = Ardublockly.generatePython();
+  }else if(Ardublockly.OUTPUT_LANGUAGE == 3){
+	outputCode = Ardublockly.generateJavaScript();
+  }
+
+
+  if (outputCode !== Ardublockly.PREV_OUTPUT_CODE_) {
+    var diff = JsDiff.diffWords(Ardublockly.PREV_OUTPUT_CODE_, outputCode);
     var resultStringArray = [];
     for (var i = 0; i < diff.length; i++) {
       if (!diff[i].removed) {
@@ -541,9 +554,19 @@ Ardublockly.renderContent = function() {
         }
       }
     }
-    document.getElementById('content_arduino').innerHTML =
-        prettyPrintOne(resultStringArray.join(''), 'cpp', false);
-    Ardublockly.PREV_ARDUINO_CODE_ = arduinoCode;
+    Ardublockly.PREV_OUTPUT_CODE_ = outputCode;
+
+	if(Ardublockly.OUTPUT_LANGUAGE == 1){
+		document.getElementById('content_code').innerHTML =
+			prettyPrintOne(resultStringArray.join(''), 'cpp', false);
+	}else if(Ardublockly.OUTPUT_LANGUAGE == 2){
+		document.getElementById('content_code').innerHTML =
+			prettyPrintOne(resultStringArray.join(''), 'py', false);
+	}else if(Ardublockly.OUTPUT_LANGUAGE == 3){
+		document.getElementById('content_code').innerHTML =
+			prettyPrintOne(resultStringArray.join(''), 'js', false);
+	}
+
   }
 
   // Generate plain XML into element

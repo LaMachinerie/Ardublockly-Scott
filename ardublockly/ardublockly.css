@@ -176,7 +176,7 @@ ul.side-nav li.side-menu-end {
 
 /* The materialize framework changes height of the div to show or hide */
 /* the collapsible elements. */
-#content_arduino {
+#content_code {
   resize: none;
   outline: none;
   border: none;
@@ -202,6 +202,20 @@ ul.side-nav li.side-menu-end {
   height: -webkit-calc(100vh - 440px);  /* WebKit   */
   height: -o-calc(100vh - 440px);       /* Opera    */
   height: calc(100vh - 440px);          /* Standard */
+}
+
+#button_execute{
+  position: relative;
+  left: 290px;
+  bottom: 70px;
+  display: active;
+}
+
+#button_reset{
+  position: relative;
+  left: 300px;
+  bottom: 70px;
+  display: active;
 }
 
 /****************/
@@ -368,6 +382,7 @@ ul.side-nav li.side-menu-end {
   bottom: 36px;
   display: none;
 }
+
 #button_load_xml .mdi-action-extension {
   font-size: 2.1rem !important;
 }

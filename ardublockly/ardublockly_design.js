@@ -269,6 +269,8 @@ Ardublockly.resizeBlocklyWorkspace = function() {
   contentBlocks.style.width = wrapperPanelSize.width + 'px';
   contentBlocks.style.width =
       (2 * wrapperPanelSize.width - contentBlocks.offsetWidth) + 'px';
+	  
+
 };
 
 /**
@@ -461,9 +463,8 @@ Ardublockly.highlightIdeOutputHeader = function() {
 Ardublockly.contentHeightToggle = function() {
   var outputHeader = document.getElementById('ide_output_collapsible_header');
   var blocks = document.getElementById('blocks_panel');
-  var arduino = document.getElementById('content_arduino');
+  var arduino = document.getElementById('content_code');
   var xml = document.getElementById('content_xml');
-
   // Blockly doesn't resize with CSS3 transitions enabled, so do it manually
   var timerId = setInterval(function() {
     window.dispatchEvent(new Event('resize'));

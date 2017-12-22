@@ -3,9 +3,10 @@
 *	    La Machinerie 2017
 *
 *          Adrien Bracq
-*
+*	Modify by Jules Topart
 *
 */
+
 
 'use strict';
 
@@ -20,15 +21,28 @@ Blockly.Blocks.scott.HUE = 60;
 
 Blockly.Blocks['scott_forward'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("Avancer de ")
-        .appendField(new Blockly.FieldNumber(0, 0), "distance")
+    this.appendValueInput('distance')
+        .setCheck('Number')
+		.appendField("Avancer de ");
+	this.appendDummyInput()
         .appendField("mm");
+    this.setInputsInline(true);
+	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(180);
- this.setTooltip("Fait avancer le robot de x mm");
- this.setHelpUrl("");
+	 this.setTooltip("Fait avancer le robot de x mm");
+	 this.setHelpUrl("");
+ 
+     this.appendValueInput("")
+        .setCheck('Type')
+        .appendField("cqc");
+    this.moveInputBefore("", 'COLOUR');
+    var type = this.workspace.newBlock('type_null');
+    type.setShadow(true);
+    type.outputConnection.connect(this.getInput("").connection);
+    type.initSvg();
+    type.render();
   }
 };
 
@@ -36,7 +50,10 @@ Blockly.Blocks['scott_backward'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Reculer de ")
-        .appendField(new Blockly.FieldNumber(0, 0), "distance")
+        .appendField(
+            new Blockly.FieldTextInput(
+                '10', Blockly.FieldTextInput.numberValidator),
+            'distance')
         .appendField("mm");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -78,7 +95,10 @@ Blockly.Blocks['scott_stop'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("S'arreter pendant ")
-        .appendField(new Blockly.FieldNumber(0, 0), "time")
+        .appendField(
+            new Blockly.FieldTextInput(
+                '10', Blockly.FieldTextInput.numberValidator),
+            'time')
         .appendField("ms");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -94,7 +114,10 @@ Blockly.Blocks['scott_turn_go'] = {
         .appendField("Tourner de ")
         .appendField(new Blockly.FieldAngle(90), "angle")
         .appendField("puis avancer de ")
-        .appendField(new Blockly.FieldNumber(0, 0), "distance")
+        .appendField(
+            new Blockly.FieldTextInput(
+                '10', Blockly.FieldTextInput.numberValidator),
+            'distance')
         .appendField("mm");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -110,7 +133,10 @@ Blockly.Blocks['scott_polygone'] = {
         .appendField("Dessine un polygone régulier de")
         .appendField(new Blockly.FieldNumber(3, 0), "nbr_cote")
         .appendField("cotés de")
-        .appendField(new Blockly.FieldNumber(0), "taille")
+        .appendField(
+            new Blockly.FieldTextInput(
+                '10', Blockly.FieldTextInput.numberValidator),
+            'taille')
         .appendField("mm");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -125,7 +151,10 @@ Blockly.Blocks['scott_cercle'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Trace un cercle de diamètre ")
-        .appendField(new Blockly.FieldNumber(0, 0), "diametre")
+        .appendField(
+            new Blockly.FieldTextInput(
+                '10', Blockly.FieldTextInput.numberValidator),
+            'diametre')
         .appendField("mm");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -185,11 +214,13 @@ Blockly.Blocks['scott_descendre_crayon'] = {
 
 Blockly.Blocks['scott_deplacement'] = {
   init: function() {
-    this.appendValueInput("distance")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([["Avancer","Avancer"], ["Reculer","Reculer"]]), "TYPE")
-        .appendField("de");
-    this.appendDummyInput()
+	this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["Avancer","Avancer"], ["Reculer","Reculer"]]), 'DIR')
+        .appendField("de")
+        .appendField(
+            new Blockly.FieldTextInput(
+                '10', Blockly.FieldTextInput.numberValidator),
+            'VALUE')
         .appendField("mm");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -202,12 +233,10 @@ Blockly.Blocks['scott_deplacement'] = {
 Blockly.Blocks['scott_rotation'] = {
   init: function() {
 	this.appendDummyInput()
-          .appendField("Tourner à");
-    this.appendValueInput("angle")
-        .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([["gauche","gauche"], ["droite","droite"]]), "TYPE")
-        .appendField("de");
-    this.appendDummyInput()
+        .appendField("Tourner à")
+        .appendField(new Blockly.FieldDropdown([["gauche","gauche"], ["droite","droite"]]), "DIR")
+        .appendField("de")
+        .appendField(new Blockly.FieldAngle(90), "VALUE")
         .appendField("°");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -220,7 +249,7 @@ Blockly.Blocks['scott_rotation'] = {
 Blockly.Blocks['scott_crayon'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["Lever","Lever"], ["Descendre","Descendre"]]), "TYPE")
+        .appendField(new Blockly.FieldDropdown([["Lever","Lever"], ["Descendre","Descendre"]]), "PEN")
         .appendField("le crayon");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

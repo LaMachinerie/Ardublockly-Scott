@@ -4,6 +4,9 @@
 goog.provide('Blockly.Arduino.scott');
 goog.require('Blockly.Arduino');
 
+//Arduino Scott block generator
+
+
 /*
 Blockly.Arduino['scott_forward'] = function(block) {
   var forward_distance = block.getFieldValue('distance');
@@ -168,8 +171,8 @@ Blockly.Arduino['scott_descendre_crayon'] = function(block) {
 */
 
 Blockly.Arduino['scott_deplacement'] = function(block) {
-  var value_distance = Blockly.Arduino.valueToCode(block, 'distance', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_type = block.getFieldValue('TYPE');
+  var value_distance = block.getFieldValue('VALUE');
+  var dropdown_type = block.getFieldValue('DIR');
   var code;
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');
@@ -190,8 +193,8 @@ Blockly.Arduino['scott_deplacement'] = function(block) {
 };
 
 Blockly.Arduino['scott_rotation'] = function(block) {
-  var value_angle = Blockly.Arduino.valueToCode(block, 'angle', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_type = block.getFieldValue('TYPE');
+  var value_angle = block.getFieldValue('VALUE');
+  var dropdown_type = block.getFieldValue('DIR');
   var code;
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');
@@ -212,7 +215,7 @@ Blockly.Arduino['scott_rotation'] = function(block) {
 };
 
 Blockly.Arduino['scott_crayon'] = function(block) {
-  var dropdown_type = block.getFieldValue('TYPE');
+  var dropdown_type = block.getFieldValue('PEN');
   var code;
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');

@@ -18,6 +18,10 @@
   <script src="../blockly/arduino_compressed.js"></script>
   <script src="../blockly/blocks/arduino/scott.js"></script>
   <script src="../blockly/generators/arduino/scott.js"></script>
+  <script src="../blockly/javascript_compressed.js"></script>
+  <script src="../blockly/generators/javascript/scott.js"></script>
+  <script src="../blockly/python_compressed.js"></script>
+  <script src="../blockly/generators/python/scott.js"></script>   
   <!-- To use the uncompressed version comment out the above and comment in the ones below -->
   <!--script src="../blockly/blockly_uncompressed.js"></script>
   <script src="../blockly/blocks/logic.js"></script>
@@ -176,20 +180,26 @@
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
-              <span class="translatable_arduinoSourceCode">Code Source Arduino</span>
+              <span class="translatable_arduinoSourceCode">Code Source</span>
             </div>
             <div class="collapsible-body">
-              <pre id="content_arduino" class="content content_height_transition content_arduino_large"></pre>
+              <pre id="content_code" class="content content_height_transition content_arduino_large"></pre>
             </div>
           </li>
           <li>
             <div class="collapsible-header" id="xml_collapsible_header">
-              <span class="collapsible_logo">&#60; &#62;</span>
-              <span class="translatable_blocksXml">Blocs XML</span>
+              <span class="mdi-action-visibility"></span>
+              <span class="translatable_blocksXml">Simulation</span>
             </div>
             <div class="collapsible-body" style="position:relative" id="xml_collapsible_body">
-              <a class="btn-floating btn-large waves-effect waves-light arduino_teal z-depth-1-half" id="button_load_xml"><i class="mdi-action-extension"></i></a>
-              <textarea id="content_xml" class="content content_height_transition content_xml_large" wrap="soft"></textarea>
+			<!--style="display:none"-->
+			<textarea  id="content_xml" style="display:none" class="content content_height_transition content_xml_large" wrap="soft"></textarea>
+			  <div id="visualization">
+				<canvas id="scratch" width="400" height="400" style="display: none"></canvas>
+				<canvas id="display" width="400" height="400"></canvas>
+			  </div>
+				<a class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_orange" id="button_execute"><i class="mdi-av-play-arrow"></i></a>
+				<a class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_orange" id="button_reset"><i class="mdi-action-delete"></i></a>
             </div>
           </li>
         </ul>
@@ -221,6 +231,10 @@
         <label><span class="translatable_difficulty">Difficulté</span>:</label>
         <select name="settings_difficulty" id="difficulty"></select>
       </div>
+	  <div class="modal_section">
+        <label><span class="translatable_output_language">Langage de programmation</span>:</label>
+        <select name="settings_output_language" id="outputLang"></select>
+      </div>
       <div class="modal_section">
         <label><span class="translatable_compilerLocation">Chemin d'accés au compilateur</span>:</label>
         <input type="text" id="settings_compiler_location" readonly>
@@ -236,7 +250,7 @@
         </select>
       </div>
       <div class="modal_section">
-        <label><span class="translatable_comPort">Ports série C(OM)<span>:</label>
+        <label><span class="translatable_comPort">Ports série (COM)<span>:</label>
         <select name="settings_serial" id="serial_port">
           <option value="COMX" class="translatable_comPortDefault">Port série inconnu</option>
         </select>
@@ -330,7 +344,18 @@
   <script src="ardublockly_toolbox.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly_difficulty.js"></script>
+  <script src="ardublockly_outputLang.js"></script>
   <script src="ardublockly.js"></script>
+  
+  
+  <!-- Ardublockly ad-on -->
+  <script src="turtle.js"></script>
+  <!-- Ardublockly ad-on Libs -->
+  <!--script src="js_libs/BlocklyGames/js-blocks.js"></script>
+  <script src="js_libs/BlocklyGames/lib-dialogs.js"></script>
+  <script src="js_libs/BlocklyGames/lib-games.js"></script>
+  <script src="js_libs/BlocklyGames/lib-interface.js"></script>
+  <script src="js_libs/BlocklyGames/slider.js"></script-->
   <script>
     window.addEventListener('load', function load(event) {
       window.removeEventListener('load', load, false);
@@ -339,4 +364,3 @@
   </script>
 </body>
 </html>
-
