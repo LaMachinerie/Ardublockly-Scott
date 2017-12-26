@@ -160,6 +160,7 @@ Blockly.Input.prototype.isVisible = function() {
  * @param {boolean} visible True if visible.
  * @return {!Array.<!Blockly.Block>} List of blocks to render.
  */
+ 
 Blockly.Input.prototype.setVisible = function(visible) {
   var renderList = [];
   if (this.visible_ == visible) {

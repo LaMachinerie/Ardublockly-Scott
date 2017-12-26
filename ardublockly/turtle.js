@@ -29,7 +29,6 @@ Turtle.visible = true;
 Turtle.interpreter = null;
 
 
-
 /** Initialize function for Turtle */
 Turtle.init = function() {
 
@@ -43,15 +42,27 @@ Turtle.init = function() {
 
   Turtle.ctxDisplay = document.getElementById('display').getContext('2d');
   Turtle.ctxScratch = document.getElementById('scratch').getContext('2d');
+  Turtle.resizeCanvas();
   Turtle.reset();
   
-  document.getElementById('display').style.width = document.getElementById('content_code').offsetWidth + 'px';
+
   Ardublockly.bindClick_('button_execute', Turtle.runButtonClick);
   Ardublockly.bindClick_('button_reset', Turtle.resetButtonClick);
   
   setTimeout(Turtle.importInterpreter, 1);
   // Lazy-load the syntax-highlighting.
 };
+
+
+Turtle.resizeCanvas = function(){
+  if(document.getElementById('content_code').offsetWidth != 0)
+    document.getElementById('display').style.width = document.getElementById('content_code').offsetWidth + 'px';
+  else{
+	document.getElementById('display').style.width = document.getElementsByClassName('collapsible-header')[1].offsetWidth + 'px';
+  }
+}
+
+
 
 /**
  * Load the JavaScript interperter.

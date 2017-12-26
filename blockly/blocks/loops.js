@@ -126,7 +126,8 @@ Blockly.Blocks['controls_for'] = {
   /**
    * Block for 'for' loop.
    * @this Blockly.Block
-   */
+   **/
+   
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.CONTROLS_FOR_TITLE,

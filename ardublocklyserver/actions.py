@@ -163,6 +163,7 @@ def set_compiler_path():
     ServerCompilerSettings and if the file path is different to that stored
     already it triggers the new data to be saved into the settings file.
     """
+    print("Openning browser...")
     new_path = gui.browse_file_dialog()
     if new_path != '':
         ServerCompilerSettings().compiler_dir = new_path

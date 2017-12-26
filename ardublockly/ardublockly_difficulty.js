@@ -31,7 +31,7 @@ Ardublockly.DIFFICULTY_NAME = {
 	3- Comfirmé
 	4- Expert (Tous les blocs)
 ***********************************/
-Ardublockly.DIFFICULTY = 4;
+Ardublockly.DIFFICULTY = 1;
 
 Ardublockly.initDifficulty = function() {
   Ardublockly.populateDifficultyMenu(Ardublockly.DIFFICULTY);

@@ -34,6 +34,7 @@ def browse_file_dialog():
     root.geometry('0x0+0+0')
     root.deiconify()
     root.lift()
+    root.attributes("-topmost", True)
     root.focus_force()
     root.update()
     file_path = tkFileDialog.askopenfilename()
@@ -56,6 +57,7 @@ def browse_dir_dialog():
     root.overrideredirect(True)
     root.geometry('0x0+0+0')
     root.deiconify()
+    root.attributes("-topmost", True)
     root.lift()
     root.focus_force()
     dir_path = tkFileDialog.askdirectory(

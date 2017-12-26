@@ -1,7 +1,7 @@
 var Ardublockly = Ardublockly || {};
 Ardublockly.LOCALISED_TEXT = {
   translationLanguage: "Français",
-  title: "Ardublockly",
+  title: "Scott studio",
   blocks: "Blocs",
   /* Menu */
   open: "Ouvrir",
@@ -27,7 +27,7 @@ Ardublockly.LOCALISED_TEXT = {
   sketchName: "Nom de Sketch",
   /* Arduino console output */
   arduinoOpMainTitle: "Console Arduno IDE",
-  arduinoOpWaiting: "Chargement de la reponse Arduino IDE",
+  arduinoOpWaiting: "Chargement de la reponse Arduino IDE ...",
   arduinoOpUploadedTitle: "Téléversement terminé",
   arduinoOpVerifiedTitle: "Compilation terminé",
   arduinoOpOpenedTitle: "Sketch ouvert dans l'IDE",
@@ -36,8 +36,8 @@ Ardublockly.LOCALISED_TEXT = {
   arduinoOpErrorSketchTitle: "",
   arduinoOpErrorFlagTitle: "",
   arduinoOpErrorFlagPrefTitle: "",
-  arduinoOpErrorIdeDirTitle: "",
-  arduinoOpErrorIdeDirBody: "",
+  arduinoOpErrorIdeDirTitle: "Erreur: le chemin d'accès au compilateur n'est pas valide",
+  arduinoOpErrorIdeDirBody: "Erreur: le chemin d'accès au compilateur n'est pas valide",
   arduinoOpErrorIdeOptionTitle: "",
   arduinoOpErrorIdeOptionBody: "L'option de démarage de l'IDE n'a pas encore été défini.<br>" +
                                "Veuillez selectionner une option dans les paramètres.",
@@ -58,9 +58,9 @@ Ardublockly.LOCALISED_TEXT = {
   invalidXmlTitle: "",
   invalidXmlBody: "",
   /* Tooltips */
-  uploadingSketch: "Televersement...",
-  uploadSketch: "Televerser",
-  verifyingSketch: "Verification...",
+  uploadingSketch: "Téléversement...",
+  uploadSketch: "Téléverser",
+  verifyingSketch: "Vérification...",
   verifySketch: "Verifier",
   openingSketch: "Ouverture...",
   openSketch: "Ouvrir dans l'IDE",
@@ -83,6 +83,7 @@ Ardublockly.LOCALISED_TEXT = {
   catInputOutput: "Entree/Sortie",
   catTime: "Temps",
   catAudio: "Audio",
+  catScott: "Scott",
   catMotors: "Moteurs",
   catComms: "Comms",
 };

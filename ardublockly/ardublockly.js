@@ -61,23 +61,11 @@ Ardublockly.bindActionFunctions = function() {
     $('.button-collapse').sideNav('hide');
   });
   Ardublockly.bindClick_('menu_example_1', function() {
-    Ardublockly.loadServerXmlFile('../examples/blink.xml');
+    Ardublockly.loadServerXmlFile('../examples/Scott_dessin.xml');
     $('.button-collapse').sideNav('hide');
   });
   Ardublockly.bindClick_('menu_example_2', function() {
-    Ardublockly.loadServerXmlFile('../examples/serial_print_ascii_.xml');
-    $('.button-collapse').sideNav('hide');
-  });
-  Ardublockly.bindClick_('menu_example_3', function() {
-    Ardublockly.loadServerXmlFile('../examples/serial_repeat_game.xml');
-    $('.button-collapse').sideNav('hide');
-  });
-  Ardublockly.bindClick_('menu_example_4', function() {
-    Ardublockly.loadServerXmlFile('../examples/Scott_suiveur.xml');
-    $('.button-collapse').sideNav('hide');
-  });
-  Ardublockly.bindClick_('menu_example_5', function() {
-    Ardublockly.loadServerXmlFile('../examples/Scott_autonome.xml');
+    Ardublockly.loadServerXmlFile('../examples/blink.xml');
     $('.button-collapse').sideNav('hide');
   });
 
@@ -95,11 +83,11 @@ Ardublockly.bindActionFunctions = function() {
   Ardublockly.bindClick_('button_toggle_toolbox', Ardublockly.toogleToolbox);
 
   // Settings modal input field listeners
-  Ardublockly.bindClick_('settings_compiler_location', function() {
+  Ardublockly.bindClick_('setCompilerLocationButton', function() {
     ArdublocklyServer.requestNewCompilerLocation(
         Ardublockly.setCompilerLocationHtml);
   });
-  Ardublockly.bindClick_('settings_sketch_location', function() {
+  Ardublockly.bindClick_('setSketchLocationButton', function() {
     ArdublocklyServer.requestNewSketchLocation(
         Ardublockly.setSketchLocationHtml);
   });

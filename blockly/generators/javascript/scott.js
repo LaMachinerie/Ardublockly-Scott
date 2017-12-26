@@ -27,7 +27,8 @@ Blockly.JavaScript['scott_crayon'] = function(block) {
  
  Blockly.JavaScript['scott_forward'] = function(block) {
   // Generate JavaScript for pen up/down.
-  var value = block.getFieldValue('distance');
+  var value = Blockly.JavaScript.valueToCode(block, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE) || '0';
   var func = "Avancer";
   return func +
       '(' + value + ');\n';
@@ -35,7 +36,8 @@ Blockly.JavaScript['scott_crayon'] = function(block) {
 
 Blockly.JavaScript['scott_backward'] = function(block) {
   // Generate JavaScript for pen up/down.
-  var value = block.getFieldValue('distance');
+  var value = Blockly.JavaScript.valueToCode(block, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE) || '0';
   var func = "Reculer";
   return func +
       '(' + value + ');\n';

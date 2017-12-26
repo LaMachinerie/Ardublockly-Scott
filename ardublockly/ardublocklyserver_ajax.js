@@ -237,10 +237,10 @@ ArdublocklyServer.requestCompilerLocation = function(callback) {
  *                             an HTML element of type input text.
  */
 ArdublocklyServer.requestNewCompilerLocation = function(callback) {
-  //TODO: Remove the something=else, its there for testing purposes
+  console.log("Openning explorer ...");
   ArdublocklyServer.ajaxPostForm(
       'ArduServerCompilerSettings.html',
-      'compiler=set&something=else',
+      'compiler=set',
       callback);
 };
 
@@ -266,6 +266,7 @@ ArdublocklyServer.requestSketchLocation = function(callback) {
  *                             within an HTML element of type input text.
  */
 ArdublocklyServer.requestNewSketchLocation = function(callback) {
+  console.log("Openning explorer ...");
   ArdublocklyServer.ajaxPostForm(
       'ArduServerCompilerSettings.html',
       'sketch=set',

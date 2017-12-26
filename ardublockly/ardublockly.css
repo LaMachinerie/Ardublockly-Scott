@@ -40,7 +40,7 @@ body {
 /*  Arduino Colours  */
 /*********************/
 .arduino_teal {
-  background-color: #00979C;
+  background-color: #f47a42;
 }
 .arduino_teal_dark {
   background-color: #006468;
@@ -161,6 +161,10 @@ ul.side-nav li.side-menu-end {
   font-style: 0.2em !important;
   min-height: 384px;
 }
+
+
+
+
 .content_xml_large {
   height: -moz-calc(100vh - 286px);     /* Firefox  */
   height: -webkit-calc(100vh - 286px);  /* WebKit   */
@@ -205,15 +209,15 @@ ul.side-nav li.side-menu-end {
 }
 
 #button_execute{
-  position: relative;
-  left: 290px;
+  position: abolute;
+  left: 30px;
   bottom: 70px;
   display: active;
 }
 
 #button_reset{
-  position: relative;
-  left: 300px;
+  position: absolute;
+  left: 80px;
   bottom: 70px;
   display: active;
 }
@@ -416,7 +420,7 @@ ul.side-nav li.side-menu-end {
   text-align: center;
   font-size: 1.5rem !important;
   z-index: 5;
-  border-color: #e0e0e0 !important;
+  border-color: #fff9e8!important;
   border-width: 1px !important;
   -webkit-border-radius: 4px 4px 4px 4px !important;
   -moz-border-radius: 4px 4px 4px 4px !important;
@@ -577,7 +581,7 @@ ul.side-nav li.side-menu-end {
 /*****************/
 .sketch_name_wrapper {
   display: inline-block;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .sketch_name_icon {
   display: inline !important;
@@ -587,7 +591,7 @@ ul.side-nav li.side-menu-end {
 }
 .sketch_name {
   width: auto !important;
-  max-width: 400px;
+  max-width: 500px;
   line-height: 64px;
   height: 3rem !important;
   font-size: 1.5rem !important;
@@ -660,7 +664,7 @@ ul.side-nav li.side-menu-end {
 
 /* Toolbox */
 .blocklyToolboxDiv {
-  border-color: #e0e0e0 !important;
+  border-color: #effffc !important;
   border-width: 0px 1px 0px 0px !important;
   -webkit-border-radius: 0px 4px 4px 0px !important;
   -moz-border-radius: 4px 4px 0px 0px !important;
@@ -675,7 +679,7 @@ ul.side-nav li.side-menu-end {
   overflow: hidden !important;
 }
 .blocklyTreeRoot {
-  background: none !important;
+  background: #effffc !important;
   border: none !important;
   margin: 36px 0px 0px 0px !important;
   padding: 0px 1px !important;
@@ -687,7 +691,7 @@ ul.side-nav li.side-menu-end {
   overflow-y: auto;
 }
 .blocklyTreeRow {
-  background: none !important;
+  background: #effffc !important;
   border: none !important;
   margin: 0px 0px !important;
   padding: 7px 16px 7px 0px !important;
@@ -717,7 +721,7 @@ ul.side-nav li.side-menu-end {
 
 /* Blockly scrollbars */
 .blocklyScrollbarKnob {
-  fill: #00878F !important;
+  fill: #f47a42 !important;
   fill-opacity: 0.7 !important;
 }
 .blocklyScrollbarBackground {

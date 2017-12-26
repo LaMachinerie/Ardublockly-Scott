@@ -3,7 +3,7 @@
 *	    La Machinerie 2017
 *
 *          Adrien Bracq
-*	Modify by Jules Topart
+*	  Modify by Jules Topart
 *
 */
 
@@ -14,54 +14,44 @@ goog.provide('Blockly.Blocks.scott');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
+
 /** Common HSV hue for all blocks in this category. */
 Blockly.Blocks.scott.HUE = 60;
 
 
-
 Blockly.Blocks['scott_forward'] = {
   init: function() {
-    this.appendValueInput('distance')
+    this.appendValueInput('VALUE')
         .setCheck('Number')
 		.appendField("Avancer de ");
 	this.appendDummyInput()
         .appendField("mm");
     this.setInputsInline(true);
-	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(180);
-	 this.setTooltip("Fait avancer le robot de x mm");
-	 this.setHelpUrl("");
- 
-     this.appendValueInput("")
-        .setCheck('Type')
-        .appendField("cqc");
-    this.moveInputBefore("", 'COLOUR');
-    var type = this.workspace.newBlock('type_null');
-    type.setShadow(true);
-    type.outputConnection.connect(this.getInput("").connection);
-    type.initSvg();
-    type.render();
+	this.setTooltip("Fait avancer le robot de x mm");
+	this.setHelpUrl("");
   }
 };
 
+
 Blockly.Blocks['scott_backward'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("Reculer de ")
-        .appendField(
-            new Blockly.FieldTextInput(
-                '10', Blockly.FieldTextInput.numberValidator),
-            'distance')
+    this.appendValueInput('VALUE')
+        .setCheck('Number')
+		.appendField("Reculer de ");
+	this.appendDummyInput()
         .appendField("mm");
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(180);
- this.setTooltip("Fait reculer le robot de x mm");
- this.setHelpUrl("");
+	this.setTooltip("Fait reculer le robot de x mm");
+	this.setHelpUrl("");
   }
 };
+
 
 Blockly.Blocks['scott_right'] = {
   init: function() {
@@ -76,6 +66,7 @@ Blockly.Blocks['scott_right'] = {
   }
 };
 
+
 Blockly.Blocks['scott_left'] = {
   init: function() {
     this.appendDummyInput()
@@ -88,7 +79,6 @@ Blockly.Blocks['scott_left'] = {
  this.setHelpUrl("");
   }
 };
-
 
 
 Blockly.Blocks['scott_stop'] = {
@@ -108,6 +98,7 @@ Blockly.Blocks['scott_stop'] = {
   }
 };
 
+
 Blockly.Blocks['scott_turn_go'] = {
   init: function() {
     this.appendDummyInput()
@@ -126,6 +117,7 @@ Blockly.Blocks['scott_turn_go'] = {
  this.setHelpUrl("");
   }
 };
+
 
 Blockly.Blocks['scott_polygone'] = {
   init: function() {
@@ -164,6 +156,7 @@ Blockly.Blocks['scott_cercle'] = {
   }
 };
 
+
 Blockly.Blocks['scott_ligne'] = {
   init: function() {
     this.appendDummyInput()
@@ -175,6 +168,7 @@ Blockly.Blocks['scott_ligne'] = {
   }
 };
 
+
 Blockly.Blocks['scott_contact'] = {
   init: function() {
     this.appendDummyInput()
@@ -185,6 +179,7 @@ Blockly.Blocks['scott_contact'] = {
  this.setHelpUrl("");
   }
 };
+
 
 Blockly.Blocks['scott_lever_crayon'] = {
   init: function() {
@@ -199,6 +194,7 @@ Blockly.Blocks['scott_lever_crayon'] = {
   }
 };
 
+
 Blockly.Blocks['scott_descendre_crayon'] = {
   init: function() {
     this.appendDummyInput()
@@ -211,6 +207,7 @@ Blockly.Blocks['scott_descendre_crayon'] = {
  this.setHelpUrl("");
   }
 };
+
 
 Blockly.Blocks['scott_deplacement'] = {
   init: function() {
@@ -230,6 +227,7 @@ Blockly.Blocks['scott_deplacement'] = {
   }
 };
 
+
 Blockly.Blocks['scott_rotation'] = {
   init: function() {
 	this.appendDummyInput()
@@ -245,6 +243,7 @@ Blockly.Blocks['scott_rotation'] = {
  this.setHelpUrl("");
   }
 };
+
 
 Blockly.Blocks['scott_crayon'] = {
   init: function() {
