@@ -24,7 +24,7 @@ Ardublockly.changeToolbox = function(){
 		// '        </shadow>' +
 		// '      </value>' +
 		// '    </block>' +
-		// '    <block type="scott_backward">' + 
+		// '    <block type="scott_backward">' +
 		// '      <value name="VALUE">' +
 		// '        <shadow type="math_number">' +
 		// '          <field name="NUM">10</field>' +
@@ -45,14 +45,14 @@ Ardublockly.changeToolbox = function(){
 		'        	</shadow>' +
 		'		</value>' +
 		'    </block>' +
-		// '    <block type="scott_right">' + 
+		// '    <block type="scott_right">' +
 		// '      <value name="angle">' +
 		// '        <shadow type="math_number">' +
 		// '          <field name="NUM">90</field>' +
 		// '        </shadow>' +
 		// '      </value>' +
 		// '    </block>' +
-		// '    <block type="scott_left">' + 
+		// '    <block type="scott_left">' +
 		// '      <value name="angle">' +
 		// '        <shadow type="math_number">' +
 		// '          <field name="NUM">90</field>' +
@@ -60,7 +60,7 @@ Ardublockly.changeToolbox = function(){
 		// '      </value>' +
 		// '    </block>' +
 		// '    <block type="scott_stop"></block>' +
-		'    <block type="scott_turn_go"></block>' +
+		//'    <block type="scott_turn_go"></block>' +
 		'    <block type="scott_crayon"></block>' +
 		// '    <block type="scott_polygone"></block>' +
 		// '    <block type="scott_cercle"></block>' +
@@ -244,7 +244,7 @@ Ardublockly.changeToolbox = function(){
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
-		'    <block type="scott_backward">' + 
+		'    <block type="scott_backward">' +
 		'      <value name="VALUE">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
@@ -254,7 +254,7 @@ Ardublockly.changeToolbox = function(){
 		'    <block type="scott_deplacement">' +
 		'		<value name="VALUE">' +
 		'       	<shadow type="math_number">' +
-		'          		<field name="NUM">10</field>' +
+		'          		<field name="NUM">90</field>' +
 		'        	</shadow>' +
 		'		</value>' +
 		'    </block>' +
@@ -265,17 +265,17 @@ Ardublockly.changeToolbox = function(){
 		'        	</shadow>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scott_right">' + 
-		'      <value name="angle">' +
+		'    <block type="scott_right">' +
+		'      <value name="VALUE">' +
 		'        <shadow type="math_number">' +
-		'          <field name="NUM">10</field>' +
+		'          <field name="NUM">90</field>' +
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
-		'    <block type="scott_left">' + 
-		'      <value name="angle">' +
+		'    <block type="scott_left">' +
+		'      <value name="VALUE">' +
 		'        <shadow type="math_number">' +
-		'          <field name="NUM">10</field>' +
+		'          <field name="NUM">90</field>' +
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
@@ -289,60 +289,6 @@ Ardublockly.changeToolbox = function(){
 		'    <block type="scott_lever_crayon"></block>' +
 		'    <block type="scott_descendre_crayon"></block>' +
 		'  </category>' +		'  <sep></sep>' +
-		'  <category id="catScott" name="Scott">' +
-		'    <block type="scott_forward">' +
-		'      <value name="VALUE">' +
-		'        <shadow type="math_number">' +
-		'          <field name="NUM">10</field>' +
-		'        </shadow>' +
-		'      </value>' +
-		'    </block>' +
-		'    <block type="scott_backward">' + 
-		'      <value name="VALUE">' +
-		'        <shadow type="math_number">' +
-		'          <field name="NUM">10</field>' +
-		'        </shadow>' +
-		'      </value>' +
-		'    </block>' +
-		'    <block type="scott_deplacement">' +
-		'		<value name="VALUE">' +
-		'       	<shadow type="math_number">' +
-		'          		<field name="NUM">10</field>' +
-		'        	</shadow>' +
-		'		</value>' +
-		'    </block>' +
-		'    <block type="scott_rotation">' +
-		'		<value name="angle">' +
-		'       	<shadow type="math_number">' +
-		'          		<field name="NUM">90</field>' +
-		'        	</shadow>' +
-		'		</value>' +
-		'    </block>' +
-		'    <block type="scott_right">' + 
-		'      <value name="angle">' +
-		'        <shadow type="math_number">' +
-		'          <field name="NUM">10</field>' +
-		'        </shadow>' +
-		'      </value>' +
-		'    </block>' +
-		'    <block type="scott_left">' + 
-		'      <value name="angle">' +
-		'        <shadow type="math_number">' +
-		'          <field name="NUM">10</field>' +
-		'        </shadow>' +
-		'      </value>' +
-		'    </block>' +
-		'    <block type="scott_stop"></block>' +
-		'    <block type="scott_turn_go"></block>' +
-		'    <block type="scott_crayon"></block>' +
-		'    <block type="scott_polygone"></block>' +
-		'    <block type="scott_cercle"></block>' +
-		'    <block type="scott_ligne"></block>' +
-		'    <block type="scott_contact"></block>' +
-		'    <block type="scott_lever_crayon"></block>' +
-		'    <block type="scott_descendre_crayon"></block>' +
-		'  </category>' +
-		'  <sep></sep>' +
 		'  <category id="catLogic" name="Logic">' +
 		'    <block type="controls_if"></block>' +
 		'    <block type="logic_compare"></block>' +
@@ -515,7 +461,7 @@ Ardublockly.changeToolbox = function(){
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
-		'    <block type="scott_backward">' + 
+		'    <block type="scott_backward">' +
 		'      <value name="VALUE">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
@@ -536,14 +482,14 @@ Ardublockly.changeToolbox = function(){
 		'        	</shadow>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scott_right">' + 
+		'    <block type="scott_right">' +
 		'      <value name="angle">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
-		'    <block type="scott_left">' + 
+		'    <block type="scott_left">' +
 		'      <value name="angle">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
@@ -735,7 +681,7 @@ Ardublockly.changeToolbox = function(){
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
-		'    <block type="scott_backward">' + 
+		'    <block type="scott_backward">' +
 		'      <value name="VALUE">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
@@ -756,14 +702,14 @@ Ardublockly.changeToolbox = function(){
 		'        	</shadow>' +
 		'		</value>' +
 		'    </block>' +
-		'    <block type="scott_right">' + 
+		'    <block type="scott_right">' +
 		'      <value name="angle">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
 		'        </shadow>' +
 		'      </value>' +
 		'    </block>' +
-		'    <block type="scott_left">' + 
+		'    <block type="scott_left">' +
 		'      <value name="angle">' +
 		'        <shadow type="math_number">' +
 		'          <field name="NUM">10</field>' +
@@ -944,4 +890,3 @@ Ardublockly.changeToolbox = function(){
 	}
 
 }
-

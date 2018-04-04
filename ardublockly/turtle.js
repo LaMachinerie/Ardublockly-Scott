@@ -18,7 +18,7 @@ Turtle.WIDTH = 400;
  */
 Turtle.pidList = [];
 
-Turtle.pause = 55;
+Turtle.pause = 10;
 
 Turtle.visible = true;
 
@@ -37,18 +37,18 @@ Turtle.init = function() {
   // if (document.getElementById('submitButton')) {
     // BlocklyGames.bindClick('submitButton', Turtle.submitToReddit);
   // }
-  
-  
+
+
 
   Turtle.ctxDisplay = document.getElementById('display').getContext('2d');
   Turtle.ctxScratch = document.getElementById('scratch').getContext('2d');
   Turtle.resizeCanvas();
   Turtle.reset();
-  
+
 
   Ardublockly.bindClick_('button_execute', Turtle.runButtonClick);
   Ardublockly.bindClick_('button_reset', Turtle.resetButtonClick);
-  
+
   setTimeout(Turtle.importInterpreter, 1);
   // Lazy-load the syntax-highlighting.
 };
@@ -93,7 +93,7 @@ Turtle.reset = function() {
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
   Turtle.ctxScratch.strokeStyle = '#ffffff';
   Turtle.ctxScratch.fillStyle = '#ffffff';
-  Turtle.ctxScratch.lineWidth = 5;
+  Turtle.ctxScratch.lineWidth = 3;
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
   Turtle.display();
@@ -271,7 +271,7 @@ Turtle.initInterpreter = function(interpreter, scope) {
   };
   interpreter.setProperty(scope, 'font',
       interpreter.createNativeFunction(wrapper));
-	  
+
     wrapper = function() {
     console.log("Not implemented");
   };
@@ -305,7 +305,7 @@ Turtle.execute = function() {
 Turtle.executeChunk_ = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pidList.length = 0;
-  Turtle.pause = 55;
+  Turtle.pause = 10; //Permet de gerer la vitesse de la simulation
   var go;
   do {
     try {
@@ -496,4 +496,3 @@ Turtle.eventSpam = function(e) {
 
 Turtle.eventSpam.previousType_ = null;
 Turtle.eventSpam.previousDate_ = 0;
-

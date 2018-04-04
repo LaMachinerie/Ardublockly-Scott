@@ -21,8 +21,8 @@ Blockly.Blocks.scott.HUE = 60;
 
 Blockly.Blocks['scott_forward'] = {
   init: function() {
-    this.appendValueInput('VALUE')
-        .setCheck('Number')
+    this.appendValueInput("VALUE")
+        .setCheck("Number")
 		.appendField("Avancer de ");
 	this.appendDummyInput()
         .appendField("mm");
@@ -38,8 +38,8 @@ Blockly.Blocks['scott_forward'] = {
 
 Blockly.Blocks['scott_backward'] = {
   init: function() {
-    this.appendValueInput('VALUE')
-        .setCheck('Number')
+    this.appendValueInput("VALUE")
+        .setCheck("Number")
 		.appendField("Reculer de ");
 	this.appendDummyInput()
         .appendField("mm");
@@ -55,9 +55,12 @@ Blockly.Blocks['scott_backward'] = {
 
 Blockly.Blocks['scott_right'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("Tourner à droite de")
-        .appendField(new Blockly.FieldAngle(90), "angle");
+    this.appendValueInput("VALUE")
+        .setCheck("Number")
+    .appendField("Tourner à droite de");
+  this.appendDummyInput()
+        .appendField("°");
+    this.setInputsInline(true);
 	this.setPreviousStatement(true, null);
 	this.setNextStatement(true, null);
     this.setColour(230);
@@ -69,9 +72,12 @@ Blockly.Blocks['scott_right'] = {
 
 Blockly.Blocks['scott_left'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("Tourner à gauche de")
-        .appendField(new Blockly.FieldAngle(90), "angle");
+    this.appendValueInput("VALUE")
+        .setCheck("Number")
+    .appendField("Tourner à gauche de");
+  this.appendDummyInput()
+        .appendField("°");
+    this.setInputsInline(true);
 	this.setPreviousStatement(true, null);
 	this.setNextStatement(true, null);
     this.setColour(230);

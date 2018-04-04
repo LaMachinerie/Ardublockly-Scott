@@ -7,9 +7,8 @@ goog.require('Blockly.Arduino');
 //Arduino Scott block generator
 
 
-/*
 Blockly.Arduino['scott_forward'] = function(block) {
-  var forward_distance = block.getFieldValue('distance');
+  var forward_distance = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ATOMIC);
 
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');
@@ -23,7 +22,7 @@ Blockly.Arduino['scott_forward'] = function(block) {
 };
 
 Blockly.Arduino['scott_backward'] = function(block) {
-  var backward_distance = block.getFieldValue('distance');
+  var backward_distance = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ATOMIC);
 
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');
@@ -37,7 +36,7 @@ Blockly.Arduino['scott_backward'] = function(block) {
 };
 
 Blockly.Arduino['scott_right'] = function(block) {
-  var right_angle = block.getFieldValue('angle');
+  var right_angle = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ATOMIC);
 
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');
@@ -51,7 +50,7 @@ Blockly.Arduino['scott_right'] = function(block) {
 };
 
 Blockly.Arduino['scott_left'] = function(block) {
-  var left_angle = block.getFieldValue('angle');
+  var left_angle = Blockly.Arduino.valueToCode(block, 'VALUE', Blockly.Arduino.ORDER_ATOMIC);
 
   //-------------------------------------------------------------------
   Blockly.Arduino.addInclude('Scott', '#include <Scott.h>');
@@ -64,6 +63,7 @@ Blockly.Arduino['scott_left'] = function(block) {
   return code;
 };
 
+/*
 Blockly.Arduino['scott_stop'] = function(block) {
   var stop_time = block.getFieldValue('time');
 

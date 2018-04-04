@@ -24,7 +24,7 @@ Blockly.JavaScript['scott_crayon'] = function(block) {
   return block.getFieldValue('PEN') +
       '(' + ');\n';
 };
- 
+
  Blockly.JavaScript['scott_forward'] = function(block) {
   // Generate JavaScript for pen up/down.
   var value = Blockly.JavaScript.valueToCode(block, 'VALUE',
@@ -45,14 +45,20 @@ Blockly.JavaScript['scott_backward'] = function(block) {
 
 Blockly.JavaScript['scott_right'] = function(block) {
   // Generate JavaScript for pen up/down.
-  return  'droite'+
-      '(' + block.getFieldValue('angle') + ');\n';
+  var value = Blockly.JavaScript.valueToCode(block, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE) || '0';
+  var func = 'droite';
+  return func +
+      '(' + value + ');\n';
 };
 
 Blockly.JavaScript['scott_left'] = function(block) {
   // Generate JavaScript for pen up/down.
-  return  'gauche'+
-      '(' + block.getFieldValue('angle') + ');\n';
+  var value = Blockly.JavaScript.valueToCode(block, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE) || '0';
+  var func = 'gauche';
+  return func +
+      '(' + value + ');\n';
 };
 
 
@@ -70,7 +76,7 @@ Blockly.JavaScript['scott_turn_go'] = function(block) {
   // Generate JavaScript for pen up/down.
   return  'turnGo' +
       '(' + block.getFieldValue('angle') + ', ' + block.getFieldValue('distance') + ');\n';
-	  
+
 };
 
 Blockly.JavaScript['scott_stop'] = function(block){
