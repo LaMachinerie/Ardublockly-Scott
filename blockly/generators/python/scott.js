@@ -9,25 +9,25 @@ goog.require('Blockly.Python');
 
 
 Blockly.Python['scott_forward'] = function(block) {
-  var forward_distance = block.getFieldValue('distance');
+  var forward_distance = block.getFieldValue('VALUE');
   var code = 'avancer('+ forward_distance +');\n';
   return code;
 };
 
 Blockly.Python['scott_backward'] = function(block) {
-  var backward_distance = block.getFieldValue('distance');
+  var backward_distance = block.getFieldValue('VALUE');
   var code = 'reculer('+ backward_distance +');\n';
   return code;
 };
 
 Blockly.Python['scott_right'] = function(block) {
-  var right_angle = block.getFieldValue('angle');
+  var right_angle = block.getFieldValue('VALUE');
   var code = 'droite('+ right_angle +');\n';
   return code;
 };
 
 Blockly.Python['scott_left'] = function(block) {
-  var left_angle = block.getFieldValue('angle');
+  var left_angle = block.getFieldValue('VALUE');
   var code = 'gauche('+ left_angle +');\n';
   return code;
 };

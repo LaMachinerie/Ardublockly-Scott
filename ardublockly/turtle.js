@@ -18,7 +18,7 @@ Turtle.WIDTH = 400;
  */
 Turtle.pidList = [];
 
-Turtle.pause = 55;
+Turtle.pause = 10;
 
 Turtle.visible = true;
 
@@ -37,18 +37,18 @@ Turtle.init = function() {
   // if (document.getElementById('submitButton')) {
     // BlocklyGames.bindClick('submitButton', Turtle.submitToReddit);
   // }
-  
-  
+
+
 
   Turtle.ctxDisplay = document.getElementById('display').getContext('2d');
   Turtle.ctxScratch = document.getElementById('scratch').getContext('2d');
   Turtle.resizeCanvas();
   Turtle.reset();
-  
+
 
   Ardublockly.bindClick_('button_execute', Turtle.runButtonClick);
   Ardublockly.bindClick_('button_reset', Turtle.resetButtonClick);
-  
+
   setTimeout(Turtle.importInterpreter, 1);
   // Lazy-load the syntax-highlighting.
 };
@@ -91,9 +91,9 @@ Turtle.reset = function() {
 
   // Clear the canvas.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxScratch.strokeStyle = '#ffffff';
-  Turtle.ctxScratch.fillStyle = '#ffffff';
-  Turtle.ctxScratch.lineWidth = 5;
+  Turtle.ctxScratch.strokeStyle = '#525252';
+  Turtle.ctxScratch.fillStyle = '#525252';
+  Turtle.ctxScratch.lineWidth = 3;
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
   Turtle.display();
@@ -114,7 +114,7 @@ Turtle.display = function() {
   Turtle.ctxDisplay.beginPath();
   Turtle.ctxDisplay.rect(0, 0,
       Turtle.ctxDisplay.canvas.width, Turtle.ctxDisplay.canvas.height);
-  Turtle.ctxDisplay.fillStyle = '#525252';
+  Turtle.ctxDisplay.fillStyle = '#F2F2F2';
   Turtle.ctxDisplay.fill();
 
   // Draw the user layer.
@@ -124,8 +124,10 @@ Turtle.display = function() {
   // Draw the turtle.
   if (Turtle.visible) {
     // Make the turtle the colour of the pen.
-    Turtle.ctxDisplay.strokeStyle = Turtle.ctxScratch.strokeStyle;
-    Turtle.ctxDisplay.fillStyle = Turtle.ctxScratch.fillStyle;
+    // Turtle.ctxDisplay.strokeStyle = Turtle.ctxScratch.strokeStyle;
+    // Turtle.ctxDisplay.fillStyle = Turtle.ctxScratch.fillStyle;
+    Turtle.ctxDisplay.strokeStyle = '#EA7D00';
+    Turtle.ctxDisplay.fillStyle = '#EA7D00';
 
     // Draw the turtle body.
     var radius = Turtle.ctxScratch.lineWidth / 2 + 10;
@@ -271,7 +273,7 @@ Turtle.initInterpreter = function(interpreter, scope) {
   };
   interpreter.setProperty(scope, 'font',
       interpreter.createNativeFunction(wrapper));
-	  
+
     wrapper = function() {
     console.log("Not implemented");
   };
@@ -305,7 +307,7 @@ Turtle.execute = function() {
 Turtle.executeChunk_ = function() {
   // All tasks should be complete now.  Clean up the PID list.
   Turtle.pidList.length = 0;
-  Turtle.pause = 55;
+  Turtle.pause = 10; //Permet de gerer la vitesse de la simulation
   var go;
   do {
     try {
@@ -496,4 +498,3 @@ Turtle.eventSpam = function(e) {
 
 Turtle.eventSpam.previousType_ = null;
 Turtle.eventSpam.previousDate_ = 0;
-
