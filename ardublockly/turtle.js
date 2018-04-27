@@ -91,8 +91,8 @@ Turtle.reset = function() {
 
   // Clear the canvas.
   Turtle.ctxScratch.canvas.width = Turtle.ctxScratch.canvas.width;
-  Turtle.ctxScratch.strokeStyle = '#ffffff';
-  Turtle.ctxScratch.fillStyle = '#ffffff';
+  Turtle.ctxScratch.strokeStyle = '#525252';
+  Turtle.ctxScratch.fillStyle = '#525252';
   Turtle.ctxScratch.lineWidth = 3;
   Turtle.ctxScratch.lineCap = 'round';
   Turtle.ctxScratch.font = 'normal 18pt Arial';
@@ -114,7 +114,7 @@ Turtle.display = function() {
   Turtle.ctxDisplay.beginPath();
   Turtle.ctxDisplay.rect(0, 0,
       Turtle.ctxDisplay.canvas.width, Turtle.ctxDisplay.canvas.height);
-  Turtle.ctxDisplay.fillStyle = '#525252';
+  Turtle.ctxDisplay.fillStyle = '#F2F2F2';
   Turtle.ctxDisplay.fill();
 
   // Draw the user layer.
@@ -124,8 +124,10 @@ Turtle.display = function() {
   // Draw the turtle.
   if (Turtle.visible) {
     // Make the turtle the colour of the pen.
-    Turtle.ctxDisplay.strokeStyle = Turtle.ctxScratch.strokeStyle;
-    Turtle.ctxDisplay.fillStyle = Turtle.ctxScratch.fillStyle;
+    // Turtle.ctxDisplay.strokeStyle = Turtle.ctxScratch.strokeStyle;
+    // Turtle.ctxDisplay.fillStyle = Turtle.ctxScratch.fillStyle;
+    Turtle.ctxDisplay.strokeStyle = '#EA7D00';
+    Turtle.ctxDisplay.fillStyle = '#EA7D00';
 
     // Draw the turtle body.
     var radius = Turtle.ctxScratch.lineWidth / 2 + 10;
